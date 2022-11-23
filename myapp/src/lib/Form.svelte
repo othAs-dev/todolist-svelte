@@ -114,7 +114,7 @@
     margin-top: 50px;
   }
   .todoItem{
-    margin-left: -100px;
+    margin-left: -45px;
   }
   .checked {
         text-decoration: line-through;
