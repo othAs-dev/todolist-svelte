@@ -52,9 +52,9 @@
     <div class="todoList">
       {#each todoItems as item}
         <div class="todoItem">
-          <input  bind:checked={item.status} on:click={() => updateStatus(item.id, Number(!item.status))} type="checkbox" transition:fade>
+          <input  bind:checked={item.status} on:click={() => updateStatus(item.id, Number(!item.status))} type="checkbox" title={item.status === 1 ? `Uncheck task ${item.name}`: `Check task ${item.name}`} transition:fade>
           <span  class:checked={item.status}  class="items" transition:fade>{item.name}</span>
-          <span on:click={() => removeToDo(item.id)} class='fa fa-trash' transition:fade></span>
+          <span on:click={() => removeToDo(item.id)} title="Delete task {item.name}" class='fa fa-trash' transition:fade></span>
         </div>
       {/each} 
     </div>
